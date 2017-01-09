@@ -1,0 +1,3 @@
+---
+- include: controllers.yml
+- include: pis.yml

@@ -1,2 +1,4 @@
 ---
 # tasks file for pi
+- name: Things for pi
+  debug: var=ansible_machine

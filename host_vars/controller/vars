@@ -1,0 +1,4 @@
+---
+ansible_host: localhost
+ansible_user: root
+ansible_ssh_pass: '{{ vault_pass_localhost }}'
