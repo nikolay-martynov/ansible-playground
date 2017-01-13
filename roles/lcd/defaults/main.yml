@@ -1,0 +1,6 @@
+---
+lcd_max_usb_current: 1
+lcd_hdmi_group: 2
+lcd_hdmi_mode: 87
+lcd_hdmi_cvt: 1024 600 60 6 0 0 0
+lcd_display_rotate: 2

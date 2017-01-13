@@ -1,5 +1,8 @@
 ---
 - hosts: pis
   roles:
-    - common
-    - pi
+    - role: lcd
+      when: configure_lcd
+  tasks:
+    - include: ssh_x11.yml
+      when: configure_x11_forwarding

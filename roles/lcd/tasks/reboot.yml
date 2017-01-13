@@ -1,0 +1,21 @@
+---
+- name: Trigger reboot
+  shell: sleep 2 && shutdown -r now "Ansible triggered reboot fpr new LCD configuration"
+  async: 1
+  poll: 0
+  become: true
+  ignore_errors: true
+
+- name: Wait for machine to come down
+  connection: local
+  wait_for:
+    host: '{{ ansible_ssh_host | default(inventory_hostname) }}'
+    port: 22
+    state: stopped
+
+- name: Wait for machine to come back
+  connection: local
+  wait_for:
+    host: '{{ ansible_ssh_host | default(inventory_hostname) }}'
+    port: 22
+    state: started

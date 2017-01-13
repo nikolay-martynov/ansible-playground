@@ -1,4 +1,0 @@
----
-# tasks file for common
-- name: Things for all
-  debug: msg="Just a common stub for {{ inventory_hostname }}"

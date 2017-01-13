@@ -1,0 +1,40 @@
+---
+- name: Set max_usb_current
+  become: yes
+  notify: Reboot
+  lineinfile:
+      dest: /boot/config.txt
+      regexp: '^\s*max_usb_current'
+      line: 'max_usb_current={{ lcd_max_usb_current }}'
+
+- name: Set hdmi_group
+  become: yes
+  notify: Reboot
+  lineinfile:
+      dest: /boot/config.txt
+      regexp: '^\s*hdmi_group'
+      line: 'hdmi_group={{ lcd_hdmi_group }}'
+
+- name: Set hdmi_mode
+  become: yes
+  notify: Reboot
+  lineinfile:
+      dest: /boot/config.txt
+      regexp: '^\s*hdmi_mode'
+      line: 'hdmi_mode={{ lcd_hdmi_mode }}'
+
+- name: Set hdmi_cvt
+  become: yes
+  notify: Reboot
+  lineinfile:
+      dest: /boot/config.txt
+      regexp: '^\s*hdmi_cvt'
+      line: 'hdmi_cvt {{ lcd_hdmi_cvt }}'
+
+- name: Set display_rotate
+  become: yes
+  notify: Reboot
+  lineinfile:
+      dest: /boot/config.txt
+      regexp: '^\s*display_rotate'
+      line: 'display_rotate={{ lcd_display_rotate }}'

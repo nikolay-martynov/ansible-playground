@@ -1,2 +1,4 @@
 ---
+configure_lcd: true
+configure_x11_forwarding: true
 ansible_ssh_common_args: -o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null

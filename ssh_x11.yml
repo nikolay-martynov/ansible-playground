@@ -1,0 +1,14 @@
+---
+- name: Enable X11 Forwarding
+  become: yes
+  lineinfile:
+      dest: /etc/ssh/ssh_config
+      regexp: '^\s*#?\s*ForwardX11\s+'
+      line: 'ForwardX11 yes'
+
+- name: Enable X11 Forwarding Trusted
+  become: yes
+  lineinfile:
+      dest: /etc/ssh/ssh_config
+      regexp: '^\s*#?\s*ForwardX11Trusted\s+'
+      line: 'ForwardX11Trusted yes'

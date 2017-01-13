@@ -1,5 +1,4 @@
 ---
 - hosts: controllers
-  roles:
-    - common
-    - controller
+  tasks:
+    - debug: var=ansible_machine

@@ -1,4 +1,0 @@
----
-# tasks file for controller
-- name: Things for controller
-  debug: var=ansible_machine
