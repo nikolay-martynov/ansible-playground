@@ -1,4 +1,6 @@
 ---
 configure_lcd: true
 configure_x11_forwarding: true
+
+# Pis are frequent to re-install or change IP so dont remember them.
 ansible_ssh_common_args: -o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null

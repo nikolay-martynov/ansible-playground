@@ -1,7 +1,7 @@
 ---
 - name: Set max_usb_current
   become: yes
-  notify: Reboot
+  notify: Need reboot
   lineinfile:
       dest: /boot/config.txt
       regexp: '^\s*max_usb_current'
@@ -9,7 +9,7 @@
 
 - name: Set hdmi_group
   become: yes
-  notify: Reboot
+  notify: Need reboot
   lineinfile:
       dest: /boot/config.txt
       regexp: '^\s*hdmi_group'
@@ -17,7 +17,7 @@
 
 - name: Set hdmi_mode
   become: yes
-  notify: Reboot
+  notify: Need reboot
   lineinfile:
       dest: /boot/config.txt
       regexp: '^\s*hdmi_mode'
@@ -25,7 +25,7 @@
 
 - name: Set hdmi_cvt
   become: yes
-  notify: Reboot
+  notify: Need reboot
   lineinfile:
       dest: /boot/config.txt
       regexp: '^\s*hdmi_cvt'
@@ -33,7 +33,7 @@
 
 - name: Set display_rotate
   become: yes
-  notify: Reboot
+  notify: Need reboot
   lineinfile:
       dest: /boot/config.txt
       regexp: '^\s*display_rotate'

@@ -1,6 +1,7 @@
 ---
 - name: Enable X11 Forwarding
   become: yes
+  notify: Need reboot
   lineinfile:
       dest: /etc/ssh/ssh_config
       regexp: '^\s*#?\s*ForwardX11\s+'
@@ -8,6 +9,7 @@
 
 - name: Enable X11 Forwarding Trusted
   become: yes
+  notify: Need reboot
   lineinfile:
       dest: /etc/ssh/ssh_config
       regexp: '^\s*#?\s*ForwardX11Trusted\s+'

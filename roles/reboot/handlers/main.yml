@@ -1,4 +1,12 @@
 ---
+- name: Need reboot
+  debug: msg="Going to reboot {{ inventory_hostname }}"
+  changed_when: true
+  notify:
+    - Trigger reboot
+    - Wait for machine to come down
+    - Wait for machine to come back
+
 - name: Trigger reboot
   shell: sleep 2 && shutdown -r now "Ansible triggered reboot fpr new LCD configuration"
   async: 1

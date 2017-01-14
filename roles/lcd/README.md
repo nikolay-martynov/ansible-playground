@@ -1,7 +1,8 @@
-PI LCD Detup
+PI LCD setup
 ============
 
-Configures Pi for LCD panel.
+Configures Pi for Waveshare 10.1inch HDMI LCD screen.
+http://www.waveshare.com/wiki/10.1inch_HDMI_LCD
 
 Requirements
 ------------
@@ -22,7 +23,7 @@ See LCD panel manual.
 Dependencies
 ------------
 
-None
+- Triggers 'Need reboot' handler from role 'reboot'
 
 Example Playbook
 ----------------
